@@ -1,0 +1,68 @@
+/* Reset and base */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; line-height: 1.4; }
+body { margin: 0; color: #222; background: #fff; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; overflow-x: hidden; }
+
+/* Ensure media scale and avoid overflow */
+img, picture, video, svg { max-width: 100%; height: auto; display: block; }
+
+.container { width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 16px; padding-right: 16px; }
+
+/* Layout helpers */
+.row { display: flex; flex-wrap: wrap; gap: 20px; }
+.col { flex: 1 1 0; min-width: 0; }
+.col-50 { flex: 0 0 50%; }
+
+/* Header & Nav */
+.site-header { background: #f7f8fb; border-bottom: 1px solid #e6e9ef; }
+.main-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+.brand { font-weight: 700; font-size: 1.1rem; }
+.nav-menu ul { display: flex; gap: 12px; list-style: none; margin: 0; padding: 0; }
+.nav-menu a { color: #1a1a1a; text-decoration: none; padding: 6px 8px; display: inline-block; }
+.nav-toggle { display: none; }
+.nav-toggle-label { display: none; }
+
+.hero { padding: 36px 0; }
+.hero h1 { margin: 0 0 8px 0; font-size: 2.2rem; }
+.hero .lead { margin: 0; color: #555; }
+
+.intro { align-items: center; margin-top: 24px; margin-bottom: 24px; }
+.feature-card { background: #fff; border: 1px solid #e9eef6; padding: 18px; border-radius: 6px; }
+
+.site-footer { border-top: 1px solid #e6e9ef; padding: 18px 0; margin-top: 36px; background: #fafbfd; }
+
+/* Utility classes for preventing fixed width overflow */
+.fixed-width { max-width: 100%; width: auto; }
+
+/* Mobile-specific rules */
+@media (max-width: 768px) {
+	html { font-size: 14px; }
+	h1 { font-size: 1.6rem; }
+	h2 { font-size: 1.25rem; }
+	p, li, a { font-size: 0.95rem; }
+
+	/* Stack columns vertically */
+	.row { flex-direction: column; }
+	.col-50 { flex: 0 0 100%; }
+
+	/* Smaller container padding */
+	.container { padding-left: 12px; padding-right: 12px; }
+
+	/* Nav: show toggle and hide menu until toggled */
+	.nav-toggle-label { display: block; cursor: pointer; padding: 8px 10px; background: transparent; border-radius: 4px; }
+	.nav-toggle-label:hover { background: rgba(0,0,0,0.03); }
+	.nav-menu { display: none; width: 100%; }
+	.nav-menu ul { flex-direction: column; gap: 8px; }
+	.nav-menu a { display: block; padding: 10px 12px; border-radius: 4px; }
+	.nav-toggle:checked + .nav-toggle-label + .nav-menu { display: block; }
+
+	/* Make hero padding smaller */
+	.hero { padding: 20px 0; }
+
+	/* Prevent overflow on any fixed elements */
+	.fixed-element, .fixed-width { max-width: 100%; width: auto; }
+}
+
+/* Small accessibility tweak: focus styles */
+a:focus, button:focus, input:focus { outline: 3px solid rgba(21,156,228,0.25); outline-offset: 2px; }
+

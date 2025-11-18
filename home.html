@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Home — Responsive Example</title>
+	<link rel="stylesheet" href="home.css">
+</head>
+<body>
+	<header class="site-header">
+		<nav class="main-nav container">
+			<div class="brand">MySite</div>
+			<input id="nav-toggle" class="nav-toggle" type="checkbox" />
+			<label for="nav-toggle" class="nav-toggle-label">Menu ☰</label>
+			<div class="nav-menu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="hero">
+			<div class="container">
+				<h1>Welcome to My Responsive Page</h1>
+				<p class="lead">This page demonstrates media queries, stacked columns, a mobile nav, and fluid images.</p>
+			</div>
+		</div>
+	</header>
+
+	<main class="container">
+		<section class="row intro">
+			<article class="col col-50">
+				<h2 id="about">About Us</h2>
+				<p>We build accessible, responsive websites that look great on phones and desktops. Resize the browser to see the layout adapt.</p>
+			</article>
+			<aside class="col col-50">
+				<img src="https://via.placeholder.com/800x450.png?text=Sample+Image" alt="sample" />
+			</aside>
+		</section>
+
+		<section class="row features">
+			<div class="col feature-card">
+				<h3>Feature One</h3>
+				<p>Short description of the first feature.</p>
+			</div>
+			<div class="col feature-card">
+				<h3>Feature Two</h3>
+				<p>Short description of the second feature.</p>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>&copy; 2025 MySite — Example responsive layout</p>
+		</div>
+	</footer>
+</body>
+</html>
